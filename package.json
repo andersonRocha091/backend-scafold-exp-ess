@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js",
+    "test": "mocha --timeout 20000 --exit src/tests/*.js",
+    "test:watch": "mocha src/tests/*.js -w"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "sucrase": "^3.17.0"
+  }
+}
